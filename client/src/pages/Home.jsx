@@ -1,4 +1,6 @@
 import { motion } from "motion/react";
+import { useState } from "react";
+import LoginModal from "../components/LoginModal";
 
 const Home = () => {
   const highlights = [
@@ -8,6 +10,7 @@ const Home = () => {
     "Customizable Templates",
     "Fast and Efficient Workflow",
   ]
+  const [openLogin, setOpenLogin] = useState(false);
   return (
     <div className="relative min-h-screen bg-[#040404] text-white overflow-hidden">
 
@@ -28,7 +31,9 @@ const Home = () => {
             Pricing
           </div>
 
-          <button className="px-4 py-2 rounded-lg border border-white/20 hover:bg-white/10 transition-colors text-sm">
+          <button className="px-4 py-2 rounded-lg border border-white/20 hover:bg-white/10 transition-colors text-sm"
+            onClick={() => setOpenLogin(true)}
+          >
             Get Started
           </button>
 
@@ -99,6 +104,11 @@ const Home = () => {
       <footer className="text-center py-6 text-zinc-500 text-sm border-t border-white/10">
         &copy; {new Date().getFullYear()} GenWeb.ai. All rights reserved.
       </footer>
+
+      {openLogin && <LoginModal
+        open={openLogin}
+        onClose={() => setOpenLogin(false)} />}
+
     </div>
   );
 };
