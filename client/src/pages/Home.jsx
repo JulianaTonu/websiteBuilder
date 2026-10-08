@@ -72,7 +72,9 @@ const Home = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-8 flex justify-center gap-4"
         >
-          <button className="px-6 py-3 rounded-xl bg-white text-black font-medium hover:bg-zinc-200 transition">
+          <button className="px-6 py-3 rounded-xl bg-white text-black font-medium hover:bg-zinc-200 transition"
+            onClick={() => setOpenLogin(true)}
+          >
             Get Started
           </button>
           <button className="px-6 py-3 rounded-xl border border-white/20 hover:bg-white/10 transition">
