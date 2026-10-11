@@ -71,7 +71,7 @@ const LoginModal = ({ open, onClose }) => {
                                     whileTap={{ scale: 0.96 }}
                                     className="group relative h-13 w-full overflow-hidden rounded-xl bg-white font-semibold text-black shadow-xl transition"
                                 >
-                                    <div className="absolute inset-0 bg-gradient-to-r from-zinc-100 to-white opacity-0 group-hover:opacity-100 transition" 
+                                    <div className="absolute inset-0 bg-gradient-to-r from-zinc-100 to-white opacity-0 group-hover:opacity-100 transition"
                                     />
                                     <div className="relative flex items-center justify-center gap-3">
                                         <img
@@ -82,6 +82,29 @@ const LoginModal = ({ open, onClose }) => {
                                         <span>Continue with Google</span>
                                     </div>
                                 </motion.button>
+
+
+                                <div className="flex items-center gap-4 my-10">
+                                    <div className="h-px flex-1 bg-white/10" />
+
+                                    <span className="text-xs text-zinc-500 tracking-wide">
+                                        Secure Login
+                                    </span>
+
+                                    <div className="h-px flex-1 bg-white/10" />
+                                </div>
+
+                                <p className="text-xs text-zinc-500 leading-relaxed">
+                                    By continuing, you agree to our{" "}
+                                    <span className="underline cursor-pointer hover:text-zinc-300">
+                                        Terms of Service
+                                    </span>{" "}
+                                    and{" "}
+                                    <span className="underline cursor-pointer hover:text-zinc-300">
+                                        Privacy Policy
+                                    </span>
+                                </p>
+
 
                             </div>
                         </div>
